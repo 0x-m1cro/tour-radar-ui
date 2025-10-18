@@ -34,11 +34,14 @@ export default function TourCard({
       className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
     >
       <Link href={`/tour/${id}`}>
-        <div className="relative h-48 bg-gray-200">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-            <span className="text-white text-sm font-medium">{destination}</span>
+        <div className="relative h-48 bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/30 via-blue-500/30 to-orange-500/30 flex items-center justify-center">
+            <div className="text-center">
+              <div className="text-4xl mb-2">🌍</div>
+              <span className="text-white text-lg font-semibold drop-shadow-lg">{destination}</span>
+            </div>
           </div>
-          <div className="absolute top-2 right-2 bg-white px-3 py-1 rounded-full text-xs font-semibold text-primary">
+          <div className="absolute top-3 right-3 bg-primary text-white px-3 py-1 rounded-md text-xs font-semibold shadow-md">
             {category}
           </div>
         </div>
@@ -66,11 +69,11 @@ export default function TourCard({
           <div className="flex items-center justify-between">
             <div>
               <span className="text-xs text-gray-500">From</span>
-              <div className="text-xl font-bold text-primary">
+              <div className="text-2xl font-bold text-primary">
                 ${price.toLocaleString()}
               </div>
             </div>
-            <button className="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+            <button className="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
               View Details
             </button>
           </div>

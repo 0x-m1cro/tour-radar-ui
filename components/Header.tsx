@@ -26,9 +26,9 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md">
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <div className="text-2xl font-bold text-primary">
@@ -37,14 +37,14 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6">
             {/* Destinations Dropdown */}
             <div 
               className="relative"
               onMouseEnter={() => setActiveDropdown('destinations')}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <button className="text-gray-700 hover:text-primary font-medium transition-colors">
+              <button className="text-gray-700 hover:text-primary transition-colors py-2">
                 Destinations
               </button>
               <AnimatePresence>
@@ -76,7 +76,7 @@ export default function Header() {
               onMouseEnter={() => setActiveDropdown('tours')}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <button className="text-gray-700 hover:text-primary font-medium transition-colors">
+              <button className="text-gray-700 hover:text-primary transition-colors py-2">
                 Tour Types
               </button>
               <AnimatePresence>
@@ -102,22 +102,22 @@ export default function Header() {
               </AnimatePresence>
             </div>
 
-            <Link href="/about" className="text-gray-700 hover:text-primary font-medium transition-colors">
+            <Link href="/about" className="text-gray-700 hover:text-primary transition-colors py-2">
               About Us
             </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-primary font-medium transition-colors">
+            <Link href="/contact" className="text-gray-700 hover:text-primary transition-colors py-2">
               Contact
             </Link>
           </nav>
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <button className="text-gray-700 hover:text-primary font-medium transition-colors">
+            <Link href="#" className="text-gray-700 hover:text-primary transition-colors">
               Sign In
-            </button>
-            <button className="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-medium transition-colors">
+            </Link>
+            <Link href="#" className="bg-primary hover:bg-primary-dark text-white px-5 py-2 rounded-md text-sm font-medium transition-colors">
               Sign Up
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}

@@ -63,14 +63,14 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[600px] bg-gradient-to-br from-secondary via-accent to-primary flex items-center justify-center">
-        <div className="absolute inset-0 bg-black/30"></div>
+      <section className="relative h-[500px] bg-gradient-to-br from-[#0d7490] via-[#0891b2] to-[#f97316] flex items-center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-bold mb-6"
+            className="text-5xl md:text-6xl font-bold mb-4"
           >
             Discover Your Next Adventure
           </motion.h1>
@@ -78,7 +78,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl mb-10"
+            className="text-xl md:text-2xl mb-8"
           >
             Explore the world with our curated selection of tours and experiences
           </motion.p>
@@ -89,19 +89,19 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             onSubmit={handleSearch}
-            className="bg-white rounded-lg p-2 flex flex-col md:flex-row gap-2 max-w-3xl mx-auto shadow-2xl"
+            className="bg-white rounded-md p-1 flex flex-col md:flex-row gap-2 max-w-3xl mx-auto shadow-xl"
           >
             <input
               type="text"
               placeholder="Where do you want to go?"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none"
+              className="flex-1 px-4 py-3 rounded-md text-gray-900 focus:outline-none border-0"
             />
             <select
               value={selectedDestination}
               onChange={(e) => setSelectedDestination(e.target.value)}
-              className="px-4 py-3 rounded-lg text-gray-900 focus:outline-none bg-gray-50"
+              className="px-4 py-3 rounded-md text-gray-900 focus:outline-none bg-white border-0"
             >
               <option value="">All Destinations</option>
               {destinations.map((dest) => (
@@ -112,7 +112,7 @@ export default function HomePage() {
             </select>
             <button
               type="submit"
-              className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg font-medium transition-colors"
+              className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-md font-medium transition-colors whitespace-nowrap"
             >
               Search Tours
             </button>
